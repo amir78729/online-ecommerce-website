@@ -11,13 +11,13 @@ header {
     background-image: url("https://wallpaperaccess.com/full/2489626.jpg");
     background-size: 100%;
     background-position: center;
-    box-shadow: 0 -100px 500px black inset;
+    box-shadow: 0 -100px 400px black inset;
     transition: box-shadow .3s, background-size .3s;
 }
 
 header:hover {
     background-size: 105%;
-    box-shadow: 0 -0px 600px black inset;
+    box-shadow: 0 -150px 400px black inset;
     transition: box-shadow .3s, background-size .3s;
 }
 
@@ -54,11 +54,12 @@ input[type='text'], input[type='password'] {
 a:link, a:visited {
     color: #ccc;
     transition: color .2s, margin .3s;
+    text-decoration: none;
 }
 a:hover {
     color: goldenrod;
     transition: color .2s, margin .3s ;
-    margin: 0 5px;
+
 }
 a:active {
     color: gold;

@@ -14,7 +14,9 @@ header form {
     grid-column: 2/11;
     grid-row: 2;
 }
-
+form input[type="text"]{
+    width: max-content;
+}
 form button[type=submit]{
     opacity: 0;
     transition: opacity .2s;
@@ -38,11 +40,6 @@ header button{
     grid-row: 2;
 }
 
-
-li {
-    display: inline;
-}
-
 header .logo {
     position: relative;
     grid-column: 1/2;
@@ -61,14 +58,53 @@ header .logo {
 header nav{
     grid-column: 1/11;
     grid-row: 3;
+    /*
     justify-content: space-around;
+    */
 
 }
 nav ul{
     padding: 0 80px 0 0;
-    overflow-x: scroll;
+    overflow: scroll;
     justify-content: space-around;
+    /*
     display: flex;
+    */
 }
-
-
+nav ul li {
+    border-right: 1px solid #ffffff50;
+    display: inline;
+    text-align: center;
+    padding: 0 10px;
+    transition: padding .2s;
+    justify-content: center;
+}
+nav ul li:last-child {
+    border-right: none;
+}
+li:hover {
+    padding: 0 20px;
+    transition: padding .2s;
+}
+@media screen and (max-width: 600px){
+    header .logo{
+        grid-column: 1/13;
+        grid-row: 1/3;
+    }
+    header form {
+        grid-column: 1/13;
+        grid-row: 3;
+    }
+    header .login {
+        grid-column: 1/7;
+        grid-row: 4;
+    }
+    header .cart-items {
+        grid-column: 7/13;
+        grid-row: 4;
+    }
+    header nav {
+        grid-column: 1/13;
+        grid-row: 5;
+    }
+}

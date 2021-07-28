@@ -1,0 +1,110 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    overflow: scroll;
+}
+
+.home-item {
+    height: max-content;
+    position: relative;
+    top: 0;
+    flex: 200px;
+    padding: 20px;
+    background-color: #00000088;
+    border-radius: 20px;
+    color: white;
+    margin: 10px;
+    transition: box-shadow .2s, top .2s;
+}
+
+.home-item:hover {
+    box-shadow: 0 0 50px #00000055;
+    top: -5px;
+    transition: box-shadow .2s, top .2s;
+}
+
+.home-item > div:first-child {
+    height: 50px;
+}
+
+.home-item > div:first-child p{
+    color: goldenrod;
+    float: left;
+    position: relative;
+    top: -10px
+}
+
+.home-item > div:first-child button{
+    float: right;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.home-item > div:first-child button:hover{
+    color: goldenrod;
+}
+
+.home-item .item-image {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: white;
+    margin: auto;
+}
+.home-item .item-image img {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.home-item .item-name {
+    color: goldenrod;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+
+/* showing prices */
+.home-item .prices {
+    display: flex;
+}
+
+.home-item .current-price {
+    font-weight: bold;
+}
+.home-item .old-price {
+    text-decoration: line-through;
+    color: #999999;
+    margin-right: 20px;
+}
+
+.home-item .more-info {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    font-weight: lighter;
+    opacity: 0;
+    top: -20px;
+    transition: opacity .2s, top .2s;
+}
+.home-item:hover .more-info {
+    opacity: 1;
+    top: 0;
+    transition: opacity .2s, top .2s;
+}
+@media screen and (max-width: 600px) {
+    .home-item {
+        flex: 200px;
+    }
+    .home-item .item-image{
+        width: 100px;
+        height: 100px;
+    }
+    .home-item .item-image img {
+        width: 50px;
+    }
+}

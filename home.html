@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
+
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="styles/global-styles.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/home-items.css">
     <title>Fake Shop - Home</title>
     <style>
-
     </style>
 </head>
 <body>
@@ -33,14 +40,45 @@
                     <li><a href="">Furniture</a></li>
                     <li><a href="">Men</a></li>
                     <li><a href="">Women</a></li>
-                    <li><a href="">Home Appliances</a></li>
                     <li><a href="">Books</a></li>
                     <li><a href="">TV's</a></li>
                     <li><a href="">Computers</a></li>
+                    <li><a href="">Home Appliances</a></li>
                 </ul>
             </nav>
+            <select name="nav" id="nav-dropdown">
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Men">Men</option>
+                <option value="Women">Women</option>
+                <option value="Books">Books</option>
+                <option value="TV's">TV's</option>
+                <option value="Computers">Computers</option>
+                <option value="Home Appliances">Home Appliances</option>
+            </select>
             <button class="login">Login</button>
         <!--</div>-->
     </header>
+    <main>
+        <div class="home-item">
+            <div>
+                <p>stock+</p>
+                <button class="like-button"><i class='fas fa-heart'></i></button>
+            </div>
+            <div class="item-image">
+                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="an item from the shop">
+            </div>
+            <p class="item-name">Caylee Top</p>
+            <div class="prices">
+                <p class="old-price">$ 42</p>
+                <p class="current-price">$ 30.90</p>
+            </div>
+            <button class="more-info">more information...</button>
+        </div>
+
+
+
+    </main>
 </body>
 </html>

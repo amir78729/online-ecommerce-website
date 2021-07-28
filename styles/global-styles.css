@@ -4,19 +4,22 @@ html, body {
     height: 100%;
     position: relative;
     font-family: 'Nunito', sans-serif;
-    background-image: linear-gradient(to top, #111, #222);
+    background-image: linear-gradient(to top, #333, #222);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
     background-image: url("https://wallpaperaccess.com/full/2489626.jpg");
-    background-size: 100%;
+    background-size: 125%;
     background-position: center;
+    background-repeat: no-repeat;
     box-shadow: 0 -100px 400px black inset;
     transition: box-shadow .3s, background-size .3s;
 }
 
 header:hover {
-    background-size: 105%;
+    background-size: 130%;
     box-shadow: 0 -150px 400px black inset;
     transition: box-shadow .3s, background-size .3s;
 }

@@ -1,0 +1,65 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    background-image: linear-gradient(to top, #111, #222);
+}
+
+header {
+    background-image: url("https://wallpaperaccess.com/full/2489626.jpg");
+    background-size: 100%;
+    background-position: center;
+    box-shadow: 0 -100px 500px black inset;
+    transition: box-shadow .3s, background-size .3s;
+}
+
+header:hover {
+    background-size: 105%;
+    box-shadow: 0 -0px 600px black inset;
+    transition: box-shadow .3s, background-size .3s;
+}
+
+label {
+    margin-bottom: 50px;
+}
+header input[type="submit"], button{
+    background-color: #222;
+    color: white;
+    border-radius: 10px;
+    height: 30px;
+    font-size: 11pt;
+    outline: none;
+    border: none;
+    transition: background-color .2s;
+}
+
+button:hover, input[type='submit']:hover {
+    background-color: goldenrod;
+    transition: background-color .2s;
+}
+button:active, input[type='submit']:active {
+    background-color: gold;
+    transition: background-color .2s;
+}
+
+input[type='text'], input[type='password'] {
+    height: 30px;
+    border-radius: 10px;
+    font-size: 11pt;
+    outline: none;
+    border: none;
+}
+a:link, a:visited {
+    color: #ccc;
+    transition: color .2s, margin .3s;
+}
+a:hover {
+    color: goldenrod;
+    transition: color .2s, margin .3s ;
+    margin: 0 5px;
+}
+a:active {
+    color: gold;
+}

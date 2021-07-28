@@ -1,0 +1,109 @@
+h2 {
+    font-weight: bolder;
+    color: goldenrod;
+}
+input[type='text'], input[type='password'] {
+    width: 100%;
+    margin: 8px 0;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 11pt;
+    outline: none;
+    border: none;
+}
+
+/* link styles */
+
+a:link, a:visited {
+    color: goldenrod;
+    transition: color .2s;
+}
+a:hover {
+    color: gold;
+    transition: color .2s;
+}
+a:active {
+    color: yellow;
+}
+
+/* form styles */
+
+label {
+    margin-bottom: 50px;
+}
+input[type="submit"], button{
+    background-color: #222;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 11pt;
+    width: 100%;
+    outline: none;
+    border: none;
+    margin: 10px 0;
+    transition: background-color .2s;
+}
+
+button:hover, input[type='submit']:hover {
+    background-color: #111;
+    transition: background-color .2s;
+}
+button:active, input[type='submit']:active {
+    background-color: goldenrod;
+    transition: background-color .2s;
+}
+
+.login-form {
+    width: 30vw;
+    box-shadow: 0 0 0 #00000044;
+    padding: 40px 50px;
+    border-radius: 10px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: white;
+    min-width: 300px;
+    transition: box-shadow .2s;
+}
+
+.login-form:hover {
+    box-shadow: 0 0 50px #00000044;
+    transition: box-shadow .2s;
+}
+
+.login-form h2 {
+    text-align: center;
+}
+.login-form label a {
+    float: right;
+}
+
+/* banner styles */
+
+.banner {
+    background-image: url("https://wallpaperaccess.com/full/2489626.jpg");
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 40%;
+    margin: 0;
+    box-shadow: 0 0 40px #00000000 inset;
+    transition: background-size 2s, box-shadow 2s;
+}
+
+.banner:hover {
+    background-size: 105%;
+    box-shadow: 0 0 50px #000000 inset;
+    transition: background-size 2s, box-shadow 2s;
+}
+
+/* other styles */
+hr {
+    height: 1px;
+    background-color: #999;
+    border: none;
+}
+

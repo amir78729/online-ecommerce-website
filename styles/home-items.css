@@ -84,12 +84,13 @@ main {
 
 .home-item .more-info {
     position: relative;
-    margin: auto;
+    margin: 0 auto;
     width: 100%;
     font-weight: lighter;
     opacity: 0;
     top: -20px;
     transition: opacity .2s, top .2s;
+    cursor: pointer;
 }
 .home-item:hover .more-info {
     opacity: 1;
@@ -106,5 +107,10 @@ main {
     }
     .home-item .item-image img {
         width: 50px;
+    }
+
+    .home-item .more-info {
+        top: 0;
+        opacity: 1;
     }
 }

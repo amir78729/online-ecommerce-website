@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
+
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  <title>Fake Shop - Product Name</title>
+  <link rel="stylesheet" href="styles/global-styles.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/product-info.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://cdn.discordapp.com/attachments/709721780767424587/869638236958523462/logo.png"
+           alt="logo of the website" class="logo">
+    </div>
+    <form action="">
+      <label for="search_area" style="display: none"></label>
+      <input type="text" id="search_area" placeholder="Search Products">
+      <button type="submit"><i class="material-icons">search</i></button>
+    </form>
+    <button class="cart-items">Cart Items</button>
+    <button class="login">Login</button>
+    <button class="menu">
+      <div class="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="">Electronics</a></li>
+        <li><a href="">Clothing</a></li>
+        <li><a href="">Furniture</a></li>
+        <li><a href="">Men</a></li>
+        <li><a href="">Women</a></li>
+        <li><a href="">Books</a></li>
+        <li><a href="">TV's</a></li>
+        <li><a href="">Computers</a></li>
+        <li><a href="">Home Appliances</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="product-info">
+      <h2>Product Name</h2>
+      <div class="product-image">
+        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="product logo">
+      </div>
+      <form action="">
+        <label for="product-size">Size</label>
+        <div class="range">
+          <input id="product-size" type="range" min="0" max="4" >
+          <ul class="range-labels">
+            <li>xs</li>
+            <li>s</li>
+            <li>m</li>
+            <li>l</li>
+            <li>lg</li>
+          </ul>
+        </div>
+        <label for="product-quantity">Quantity</label>
+        <input type="number" min="1" value="1" id="product-quantity">
+
+        <p>FLAT 24% off</p>
+        <p>$12645$</p>
+      </form>
+
+    </div>
+  </main>
+</body>
+</html>

@@ -17,6 +17,8 @@ header form {
 select {
     display: none;
 }
+
+/* TODO: search area is not working correctly */
 form input[type="text"]{
     width: max-content;
 }
@@ -94,7 +96,11 @@ header .menu {
     display: none;
 }
 @media screen and (max-width: 600px){
+    /* TODO header height should be modified after focusing on the menu button */
     header{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
         background-size: 125%;
         width: 100%;
         margin: auto;

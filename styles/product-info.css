@@ -1,3 +1,7 @@
+.main {
+    padding: 40px;
+}
+
 .product-info {
     width: available;
     margin: 20px;
@@ -6,7 +10,11 @@
     border-radius: 20px;
     display: grid;
 }
-
+main > a {
+    top: 10px;
+    position: relative;
+    margin: 40px;
+}
 .product-info .product-image {
     width: 200px;
     height: 200px;

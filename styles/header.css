@@ -96,7 +96,7 @@ header .menu {
 @media screen and (max-width: 600px){
     header{
         background-size: 125%;
-        height: max-content;
+        width: 100%;
     }
 
     header:hover{
@@ -128,13 +128,30 @@ header .menu {
         display: inline-grid;
         grid-column: 9/13;
         grid-row: 4;
+        z-index: 100;
     }
-
+    header .menu:focus ~ nav {
+        top: -10px;
+        opacity: 1;
+        /*
+        visibility: visible;
+        */
+        transition: top .5s, opacity.5s;
+    }
+    header:has(.menu:focus) {
+        height: 13px;
+    }
     header nav {
+        position: relative;
+        top: -200px;
+        opacity: 0;
+        /*
+        visibility: hidden;
+        */
+        transition: top .5s, opacity.5s;
         grid-column: 1/13;
         grid-row: 5;
         width: 100%;
-        height: max-content;
 
     }
     header nav ul {
@@ -159,8 +176,5 @@ header .menu {
         margin: 0;
         padding: 0;
     }
-    select {
-        display: none;
-        grid-column: 1/5;
-    }
+
 }

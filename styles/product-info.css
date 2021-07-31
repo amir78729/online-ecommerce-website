@@ -1,16 +1,17 @@
-.main {
-    padding: 40px;
+main {
+    width: calc(100% - 20px);
+    padding: 10px;
 }
 
 main > a {
-    top: 10px;
     position: relative;
-    margin: 40px;
+    margin: 20px;
+    padding: 20px;
+    top: 10px;
 }
 
 .product-info {
-    width: available;
-    margin: 20px;
+    margin: 20px 20px;
     padding: 40px;
     background-color: #00000077;
     border-radius: 20px;
@@ -195,6 +196,16 @@ main > a {
 }
 
 @media screen and (max-width: 600px){
+    main {
+        padding: 10px;
+        width: calc(100% - 20px);
+    }
+    body, html {
+        width: 100%;
+    }
+    .product-info {
+        align-content: center;
+    }
     .product-info form{
         grid-template-columns: 1fr;
         padding: 10px 0;

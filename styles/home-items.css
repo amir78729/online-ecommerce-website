@@ -1,8 +1,9 @@
 main {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 10px;
     overflow: scroll;
+    width: calc(100% - 20px);
 }
 
 .home-item {
@@ -98,8 +99,11 @@ main {
     transition: opacity .2s, top .2s;
 }
 @media screen and (max-width: 600px) {
+    main {
+
+    }
     .home-item {
-        flex: 200px;
+        flex: 100px;
     }
     .home-item .item-image{
         width: 150px;

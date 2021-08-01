@@ -111,12 +111,13 @@ hr {
 }
 .hr-text {
     text-align: center;
-    width: 100px;
+    width: 130px;
     background-color: #333;
     margin: 0 auto -10px auto;
     font-size: 9pt;
     position: relative;
     top: -15px;
+    letter-spacing: 4px;
 }
 
 @media screen and (max-width: 800px){

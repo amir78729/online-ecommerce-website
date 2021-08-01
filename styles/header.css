@@ -50,6 +50,11 @@ header .logo {
     grid-column: 1/2;
     grid-row: 1/3;
 }
+@keyframes logo-glow {
+    0% {box-shadow: 0 0 10px white}
+    50% {box-shadow: 0 0 30px white;}
+    100% {box-shadow: 0 0 10px white;}
+}
 .logo img {
     position: absolute;
     left: 50%;
@@ -58,7 +63,9 @@ header .logo {
     margin: auto;
     height: 60px;
     border-radius: 50%;
-
+    animation-name: logo-glow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 header nav{
     grid-column: 1/11;

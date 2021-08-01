@@ -54,6 +54,8 @@ input[type='text'], input[type='password'] {
     outline: none;
     border: none;
 }
+
+/*  */
 a:link, a:visited {
     color: #ccc;
     transition: color .2s, margin .3s;
@@ -62,18 +64,17 @@ a:link, a:visited {
 a:hover {
     color: goldenrod;
     transition: color .2s, margin .3s ;
-
 }
 a:active {
     color: gold;
 }
 
+/* styling buttons with icons */
 button i {
     transform: rotate(180deg);
     opacity: 0;
     margin-right: -20px;
     transition: transform .2s, opacity .2s, margin-right .2s;
-
 }
 button:hover i {
     transform: rotate(0deg);

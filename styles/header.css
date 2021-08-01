@@ -149,22 +149,14 @@ header .menu {
         top: -00px;
         opacity: 1;
         height: 150px;
-        /*
-        visibility: visible;
-        */
         transition: top .5s, opacity.5s, height .5s;
     }
-    header:has(.menu:focus) {
-        height: 13px;
-    }
+
     header nav {
         position: relative;
         top: -250px;
         opacity: 0;
-        height: 0px;
-        /*
-        visibility: hidden;
-        */
+        height: 0;
         transition: top .5s, opacity.5s, height .5s;
         grid-column: 1/13;
         grid-row: 5;

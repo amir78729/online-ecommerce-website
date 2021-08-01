@@ -122,7 +122,7 @@ hr {
 
 @media screen and (max-width: 800px){
     .login-form {
-        width: 100%;
+        width: 60%;
         min-width: 10px;
     }
 }

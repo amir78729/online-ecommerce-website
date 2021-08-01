@@ -48,6 +48,17 @@ main {
     color: goldenrod;
 }
 
+/* deactivate the global style for <i> in <button>s */
+.like-button i {
+    transform: rotate(0deg);
+    opacity: 1;
+    margin-right: 0;
+}
+.like-button:hover i {
+    transform: rotate(0deg);
+    opacity: 1;
+    margin-right: 0;
+}
 .home-item .item-image {
     position: relative;
     height: 200px;

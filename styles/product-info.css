@@ -107,6 +107,8 @@ main > a {
 }
 
 .product-info .remove {
+    vertical-align: center;
+    height: 40px;
     grid-row: 3;
     grid-column: 5/7;
 }
@@ -114,6 +116,7 @@ main > a {
     background-color: #740a0a;
 }
 .product-info .wishlist {
+    height: 40px;
     grid-row: 3;
     grid-column: 7/9;
 }

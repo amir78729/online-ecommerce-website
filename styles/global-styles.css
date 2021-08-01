@@ -67,3 +67,17 @@ a:hover {
 a:active {
     color: gold;
 }
+
+button i {
+    transform: rotate(180deg);
+    opacity: 0;
+    margin-right: -20px;
+    transition: transform .2s, opacity .2s, margin-right .2s;
+
+}
+button:hover i {
+    transform: rotate(0deg);
+    opacity: 1;
+    margin-right: 10px;
+    transition: transform .2s, opacity .2s, margin-right .2s;
+}

@@ -78,9 +78,16 @@ button:active, input[type='submit']:active {
 
 .login-form h2 {
     text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px #aaa solid;
 }
 .login-form label a {
     float: right;
+}
+.login-form form {
+    margin-bottom: 7px;
+    padding-bottom: 20px;
+    border-bottom: 1px #aaa solid;
 }
 
 /* banner styles */

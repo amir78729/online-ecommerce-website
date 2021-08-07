@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <title>Fake Shop - Product Name</title>
+  <!-- importing icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
-  <title>Fake Shop - Product Name</title>
+  <!-- importing CSS files -->
   <link rel="stylesheet" href="styles/global-styles.css">
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/product-info.css">
@@ -18,7 +18,7 @@
       <img src="https://cdn.discordapp.com/attachments/709721780767424587/869638236958523462/logo.png"
            alt="logo of the website" class="logo">
     </div>
-    <form action="">
+    <form>
       <label for="search_area" style="display: none"></label>
       <input type="text" id="search_area" placeholder="Search Products">
       <button type="submit"><i class="material-icons">search</i></button>
@@ -46,13 +46,16 @@
       </ul>
     </nav>
   </header>
+
   <main>
     <a href="home.html"> Back to Home</a>
     <div class="product-info">
       <h2>Product Name</h2>
+
       <div class="product-image">
         <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="product logo">
       </div>
+
       <form action="">
         <label for="product-size">Size</label>
         <div class="range">
@@ -65,11 +68,14 @@
             <li>xl</li>
           </ul>
         </div>
+
         <label for="product-quantity">Quantity</label>
         <input type="number" min="1" value="1" id="product-quantity">
       </form>
+
       <p class="product-off">FLAT 24% off</p>
       <p class="product-price">$12645$</p>
+
       <button class="remove"><i class='fas fa-trash'></i> REMOVE</button>
       <button class="wishlist">MOVE TO WISHLIST</button>
     </div>

@@ -1,4 +1,6 @@
+/* importing font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+
 html, body {
     padding: 0;
     margin: 0;
@@ -43,6 +45,7 @@ button:hover, input[type='submit']:hover {
     background-color: goldenrod;
     transition: background-color .2s;
 }
+
 button:active, input[type='submit']:active {
     background-color: gold;
     transition: background-color .2s;
@@ -56,7 +59,8 @@ input[type='text'], input[type='password'] {
     border: none;
 }
 
-/*  */
+
+/* link styles */
 a:link, a:visited {
     color: #ccc;
     transition: color .2s, margin .3s;
@@ -69,6 +73,7 @@ a:hover {
 a:active {
     color: gold;
 }
+
 
 /* styling buttons with icons */
 button i {

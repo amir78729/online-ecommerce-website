@@ -9,19 +9,14 @@ header form {
     background-color: white;
     border-radius: 10px;
     padding-left: 10px;
-    /*
-    height: 32px;
-    */
     grid-column: 2/11;
     grid-row: 2;
-}
-select {
-    display: none;
 }
 
 form input[type="text"]{
     width: calc(100% - 50px);
 }
+
 form button[type=submit]{
     opacity: 0;
     transition: opacity .2s;
@@ -31,16 +26,20 @@ form button[type=submit]{
     color: #222;
     cursor: pointer;
 }
+
 form:hover button[type=submit]{
     opacity: 1;
     transition: opacity .2s;
 }
+
 header button{
     grid-column: 11/13;
 }
+
 .login {
     grid-row: 3;
 }
+
 .cart-items {
     grid-row: 2;
 }
@@ -50,6 +49,7 @@ header .logo {
     grid-column: 1/2;
     grid-row: 1/3;
 }
+
 @keyframes logo-glow {
     0% {box-shadow: 0 0 10px white}
     50% {box-shadow: 0 0 30px white;}
@@ -67,22 +67,18 @@ header .logo {
     animation-duration: 10s;
     animation-iteration-count: infinite;
 }
+
 header nav{
     grid-column: 1/11;
     grid-row: 3;
-    /*
-    justify-content: space-around;
-    */
-
 }
+
 nav ul{
     padding: 0 80px 0 0;
     overflow: scroll;
     justify-content: space-around;
-    /*
-    display: flex;
-    */
 }
+
 nav ul li {
     border-right: 1px solid #ffffff50;
     display: inline;
@@ -91,9 +87,11 @@ nav ul li {
     transition: padding .2s;
     justify-content: center;
 }
+
 nav ul li:last-child {
     border-right: none;
 }
+
 li:hover {
     padding: 0 20px;
     transition: padding .2s;
@@ -145,6 +143,7 @@ header .menu {
         grid-row: 4;
         z-index: 100;
     }
+
     header .menu:focus ~ nav {
         top: -00px;
         opacity: 1;
@@ -161,8 +160,8 @@ header .menu {
         grid-column: 1/13;
         grid-row: 5;
         width: 100%;
-
     }
+
     nav ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -170,6 +169,7 @@ header .menu {
         padding: 0;
         margin: 0;
     }
+
     header nav li {
         border-radius: 5px;
         border-right: none;
@@ -177,21 +177,25 @@ header .menu {
         padding: 0;
         background-color: #00000088;
     }
+
     header nav li:last-child {
         grid-column: 1/3;
         margin: 0;
         padding: 0;
     }
+
     header nav li:hover {
         margin: 0;
         padding: 0;
     }
+
     .menu .menu-icon {
         position: relative;
         height: 10px;
         width: 10px;
         margin: auto;
     }
+
     .menu .menu-icon div {
         position: absolute;
         background-color: white;
@@ -201,6 +205,7 @@ header .menu {
         transform: rotate(0);
         transition: top .5s, transform .5s;
     }
+
     .menu .menu-icon div:first-child {
         position: absolute;
         background-color: white;
@@ -210,6 +215,7 @@ header .menu {
         transform: rotate(0);
         transition: top .5s, transform .5s;
     }
+
     .menu .menu-icon div:last-child {
         position: absolute;
         background-color: white;
@@ -224,11 +230,13 @@ header .menu {
         transform: rotate(45deg);
         transition: top .5s, transform .5s;
     }
+
     .menu:focus .menu-icon div:first-child {
         top: 4px;
         transform: rotate(45deg);
         transition: top .5s, transform .5s;
     }
+
     .menu:focus .menu-icon div:last-child {
         top: 4px;
         transform: rotate(-45deg);

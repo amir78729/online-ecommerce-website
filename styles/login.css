@@ -65,9 +65,6 @@ button:active, input[type='submit']:active {
     transform: translate(-50%, -50%);
     background-color: #333;
     color: white;
-    /*
-    min-width: 300px;
-    */
     transition: box-shadow .2s;
 }
 

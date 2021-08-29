@@ -142,7 +142,16 @@
                 homeItem.appendChild(pricesDiv);
 
                 // more information
-                let moreInfo = document.createElement()
+                let moreInfo = document.createElement('a');
+                moreInfo.href = "product.html";
+                let moreInfoButton = document.createElement('button');
+                moreInfoButton.classList.add('more-info');
+                let moreInfoButtonIcon = document.createElement('i');
+                moreInfoButtonIcon.classList.add('fas', 'fa-info-circle');
+                moreInfoButton.appendChild(moreInfoButtonIcon);
+                moreInfoButton.appendChild(document.createTextNode(' more information...'));
+                moreInfo.appendChild(moreInfoButton);
+                homeItem.appendChild(moreInfo);
 
                 main.appendChild(homeItem);
 

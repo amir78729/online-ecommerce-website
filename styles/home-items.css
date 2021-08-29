@@ -17,6 +17,8 @@ main {
     color: white;
     margin: 10px;
     transition: box-shadow .2s, top .2s;
+    max-height: 375px;
+    overflow: auto;
 }
 
 .home-item:hover {
@@ -85,6 +87,10 @@ main {
     color: goldenrod;
     font-weight: bolder;
     margin-bottom: 0;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* showing prices */

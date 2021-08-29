@@ -119,11 +119,7 @@
                 // image of the product
                 let itemImageDiv = document.createElement('div');
                 itemImageDiv.classList.add('item-image');
-                itemImageDiv.style.backgroundImage = `url('${product.image}')`
-                let itemImage = document.createElement('img');
-                itemImage.src = product.image;
-                itemImage.alt = product.description;
-                //itemImageDiv.appendChild(itemImage);
+                itemImageDiv.style.backgroundImage = `url('${product.image}')`;
                 homeItem.appendChild(itemImageDiv);
 
                 // item name
@@ -132,6 +128,20 @@
                 itemName.classList.add('item-name');
                 homeItem.appendChild(itemName);
 
+                // prices
+                let pricesDiv =  document.createElement('div');
+                pricesDiv.classList.add('prices');
+                let oldPrice = document.createElement('p');
+                oldPrice.appendChild(document.createTextNode('$ ' + product.price));
+                oldPrice.classList.add('old-price');
+                pricesDiv.appendChild(oldPrice);
+                let currentPrice = document.createElement('p');
+                currentPrice.appendChild(document.createTextNode('$ ' + (product.price * .9).toFixed(2)));
+                currentPrice.classList.add('current-price');
+                pricesDiv.appendChild(currentPrice);
+                homeItem.appendChild(pricesDiv);
+
+                // more information
 
                 main.appendChild(homeItem);
 

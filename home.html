@@ -79,10 +79,50 @@
             let main = document.getElementById('main');
 
             for (let p = 0; p < productsInformation.length; p++) {
+
+                    /*
+                      <div class="home-item">
+                        <div>
+                            <p>stock+</p>
+                            <button class="like-button"><i class='fas fa-heart'></i></button>
+                        </div>
+                        <div class="item-image">
+                            <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="an item from the shop">
+                        </div>
+                        <p class="item-name">Caylee Top</p>
+                        <div class="prices">
+                            <p class="old-price">$ 42</p>
+                            <p class="current-price">$ 30.90</p>
+                        </div>
+                        <a href="product.html"><button class="more-info"><i class='fas fa-info-circle'></i> more information...</button></a>
+                    </div>
+                * */
                 let product = productsInformation[p];
                 console.log(product);
+
                 let homeItem = document.createElement('div');
-                homeItem.className += 'home-item';
+                homeItem.classList.add('home-item');
+
+                // top div
+                let homeItemTopDiv = document.createElement('div');
+                homeItemTopDiv.appendChild(document.createElement('p').appendChild(document.createTextNode('stock+')));
+                let likeButton = document.createElement('button');
+                likeButton.classList.add('like-button');
+                let likeIcon = document.createElement('i');
+                likeIcon.classList.add('fas', 'fa-heart');
+                likeButton.appendChild(likeIcon);
+                homeItemTopDiv.appendChild(likeButton);
+                homeItem.appendChild(homeItemTopDiv);
+
+                // image of the product
+                let itemImageDiv = document.createElement('div');
+                itemImageDiv.classList.add('item-image');
+                let itemImage = document.createElement('img');
+                itemImage.src = product.image;
+                itemImage.alt = product.description;
+                itemImageDiv.appendChild(itemImage);
+                homeItem.appendChild(itemImageDiv);
+
 
                 homeItem.appendChild(document.createTextNode(product.category))
                 main.appendChild(homeItem);

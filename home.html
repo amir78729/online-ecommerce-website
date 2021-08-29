@@ -46,119 +46,7 @@
             </ul>
         </nav>
     </header>
-    <main>
-
-        <div class="home-item">
-            <div>
-                <p>stock+</p>
-                <button class="like-button"><i class='fas fa-heart'></i></button>
-            </div>
-            <div class="item-image">
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="an item from the shop">
-            </div>
-            <p class="item-name">Caylee Top</p>
-            <div class="prices">
-                <p class="old-price">$ 42</p>
-                <p class="current-price">$ 30.90</p>
-            </div>
-            <a href="product.html"><button class="more-info"><i class='fas fa-info-circle'></i> more information...</button></a>
-        </div>
-
-        <div class="home-item">
-            <div>
-                <p>stock+</p>
-                <button class="like-button"><i class='fas fa-heart'></i></button>
-            </div>
-            <div class="item-image">
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="an item from the shop">
-            </div>
-            <p class="item-name">Caylee Top</p>
-            <div class="prices">
-                <p class="old-price">$ 42</p>
-                <p class="current-price">$ 30.90</p>
-            </div>
-            <a href="product.html"><button class="more-info"><i class='fas fa-info-circle'></i> more information...</button></a>
-        </div>
-
-        <div class="home-item">
-            <div>
-                <p>stock+</p>
-                <button class="like-button"><i class='fas fa-heart'></i></button>
-            </div>
-            <div class="item-image">
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="an item from the shop">
-            </div>
-            <p class="item-name">Caylee Top</p>
-            <div class="prices">
-                <p class="old-price">$ 42</p>
-                <p class="current-price">$ 30.90</p>
-            </div>
-            <a href="product.html"><button class="more-info"><i class='fas fa-info-circle'></i> more information...</button></a>
-        </div>
-
-        <div class="home-item">
-            <div>
-                <p>stock+</p>
-                <button class="like-button"><i class='fas fa-heart'></i></button>
-            </div>
-            <div class="item-image">
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="an item from the shop">
-            </div>
-            <p class="item-name">Caylee Top</p>
-            <div class="prices">
-                <p class="old-price">$ 42</p>
-                <p class="current-price">$ 30.90</p>
-            </div>
-            <a href="product.html"><button class="more-info"><i class='fas fa-info-circle'></i> more information...</button></a>
-        </div>
-
-        <div class="home-item">
-            <div>
-                <p>stock+</p>
-                <button class="like-button"><i class='fas fa-heart'></i></button>
-            </div>
-            <div class="item-image">
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="an item from the shop">
-            </div>
-            <p class="item-name">Caylee Top</p>
-            <div class="prices">
-                <p class="old-price">$ 42</p>
-                <p class="current-price">$ 30.90</p>
-            </div>
-            <a href="product.html"><button class="more-info"><i class='fas fa-info-circle'></i> more information...</button></a>
-        </div>
-
-        <div class="home-item">
-            <div>
-                <p>stock+</p>
-                <button class="like-button"><i class='fas fa-heart'></i></button>
-            </div>
-            <div class="item-image">
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="an item from the shop">
-            </div>
-            <p class="item-name">Caylee Top</p>
-            <div class="prices">
-                <p class="old-price">$ 42</p>
-                <p class="current-price">$ 30.90</p>
-            </div>
-            <a href="product.html"><button class="more-info"><i class='fas fa-info-circle'></i> more information...</button></a>
-        </div>
-
-        <div class="home-item">
-            <div>
-                <p>stock+</p>
-                <button class="like-button"><i class='fas fa-heart'></i></button>
-            </div>
-            <div class="item-image">
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="an item from the shop">
-            </div>
-            <p class="item-name">Caylee Top</p>
-            <div class="prices">
-                <p class="old-price">$ 42</p>
-                <p class="current-price">$ 30.90</p>
-            </div>
-            <a href="product.html"><button class="more-info"><i class='fas fa-info-circle'></i> more information...</button></a>
-        </div>
+    <main id="main">
 
         <div class="home-item">
             <div>
@@ -177,5 +65,35 @@
         </div>
 
     </main>
+    <script>
+        /*let response = fetch('https://fakestoreapi.com/products')
+        let responseJson = response.json();
+        console.log(responseJson);*/
+
+        let getInfo = async () => {
+            let productsInformation = await fetch('https://fakestoreapi.com/products')
+                .then(res=>res.json());
+
+            // console.log(productsInformation);
+
+            let main = document.getElementById('main');
+
+            for (let p = 0; p < productsInformation.length; p++) {
+                let product = productsInformation[p];
+                console.log(product);
+                let homeItem = document.createElement('div');
+                homeItem.className += 'home-item';
+
+                homeItem.appendChild(document.createTextNode(product.category))
+                main.appendChild(homeItem);
+
+            }
+
+
+
+        }
+
+        getInfo()
+    </script>
 </body>
 </html>

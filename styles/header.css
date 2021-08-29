@@ -25,6 +25,14 @@ form button[type=submit]{
     background-color: transparent;
     color: #222;
     cursor: pointer;
+
+}
+
+form button[type=submit] i {
+    transform: rotate(0deg);
+    opacity: 1;
+    margin-right: 10px;
+    font-size: 16pt;
 }
 
 form:hover button[type=submit]{
@@ -207,24 +215,15 @@ header .menu {
     }
 
     .menu .menu-icon div:first-child {
-        position: absolute;
-        background-color: white;
-        width: 10px;
-        height: 2px;
         top: 0;
-        transform: rotate(0);
         transition: top .5s, transform .5s;
     }
 
     .menu .menu-icon div:last-child {
-        position: absolute;
-        background-color: white;
-        width: 10px;
-        height: 2px;
         top: 8px;
-        transform: rotate(0);
         transition: top .5s, transform .5s;
     }
+
     .menu:focus .menu-icon div {
         top: 4px;
         transform: rotate(45deg);
@@ -241,5 +240,14 @@ header .menu {
         top: 4px;
         transform: rotate(-45deg);
         transition: top .5s, transform .5s;
+    }
+    form button[type=submit], form:hover button[type=submit]{
+        opacity: 1;
+    }
+    form button[type=submit] i {
+        transform: rotate(0deg);
+        opacity: 1;
+        margin-right: 10px;
+        font-size: 16pt;
     }
 }

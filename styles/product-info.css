@@ -63,7 +63,6 @@ main > a {
 .range .range-labels {
     width: 100%;
     display: flex;
-    grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
     list-style-type: none;
     margin: 0;

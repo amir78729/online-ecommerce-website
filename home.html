@@ -105,7 +105,9 @@
 
                 // top div
                 let homeItemTopDiv = document.createElement('div');
-                homeItemTopDiv.appendChild(document.createElement('p').appendChild(document.createTextNode('stock+')));
+                let homeItemTopDivP = document.createElement('p');
+                homeItemTopDivP.appendChild(document.createTextNode('stock+'));
+                homeItemTopDiv.appendChild(homeItemTopDivP);
                 let likeButton = document.createElement('button');
                 likeButton.classList.add('like-button');
                 let likeIcon = document.createElement('i');
@@ -117,14 +119,20 @@
                 // image of the product
                 let itemImageDiv = document.createElement('div');
                 itemImageDiv.classList.add('item-image');
+                itemImageDiv.style.backgroundImage = `url('${product.image}')`
                 let itemImage = document.createElement('img');
                 itemImage.src = product.image;
                 itemImage.alt = product.description;
-                itemImageDiv.appendChild(itemImage);
+                //itemImageDiv.appendChild(itemImage);
                 homeItem.appendChild(itemImageDiv);
 
+                // item name
+                let itemName = document.createElement('p');
+                itemName.appendChild(document.createTextNode(product.title));
+                itemName.classList.add('item-name');
+                homeItem.appendChild(itemName);
 
-                homeItem.appendChild(document.createTextNode(product.category))
+
                 main.appendChild(homeItem);
 
             }

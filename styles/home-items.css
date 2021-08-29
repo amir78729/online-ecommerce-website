@@ -67,6 +67,9 @@ main {
     width: 200px;
     border-radius: 50%;
     background-color: white;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
     margin: auto;
 }
 

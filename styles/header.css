@@ -94,6 +94,7 @@ nav ul li {
     padding: 0 10px;
     transition: padding .2s;
     justify-content: center;
+    cursor: pointer;
 }
 
 nav ul li:last-child {

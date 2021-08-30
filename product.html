@@ -32,8 +32,8 @@
         <div></div>
       </div>
     </button>
-    <nav>
-      <ul>
+    <nav id="nav">
+      <!--<ul>
         <li><a href="">Electronics</a></li>
         <li><a href="">Clothing</a></li>
         <li><a href="">Furniture</a></li>
@@ -43,22 +43,19 @@
         <li><a href="">TV's</a></li>
         <li><a href="">Computers</a></li>
         <li><a href="">Home Appliances</a></li>
-      </ul>
+      </ul>-->
     </nav>
   </header>
-  <main>
+  <main id="main">
     <a href="home.html"> Back to Home</a>
     <div class="product-info">
-      <h2>Product Name</h2>
-
-      <div class="product-image">
-        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="product logo">
-      </div>
-
+      <h2 id="product-title"></h2>
+      <!--<div class="product-image" id="product-pic">
+      </div>-->
       <form action="">
         <label for="product-size">Size</label>
         <div class="range">
-          <input id="product-size" type="range" min="0" max="4" >
+          <input id="product-size" type="range" min="0" max="4" onchange="resizePicture()">
           <ul class="range-labels">
             <li>xs</li>
             <li>s</li>
@@ -67,17 +64,17 @@
             <li>xl</li>
           </ul>
         </div>
-
         <label for="product-quantity">Quantity</label>
         <input type="number" min="1" value="1" id="product-quantity">
       </form>
-
       <p class="product-off">FLAT 24% off</p>
       <p class="product-price">$12645$</p>
-
       <button class="remove"><i class='fas fa-trash'></i> REMOVE</button>
       <button class="wishlist">MOVE TO WISHLIST</button>
     </div>
   </main>
+
+  <script src="scripts/navbarCategories.js" defer></script>
+  <script src="scripts/productInfo.js" defer></script>
 </body>
 </html>

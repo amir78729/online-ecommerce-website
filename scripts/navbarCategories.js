@@ -1,4 +1,3 @@
-
 const getCategories = async () => {
     try {
         let categories = await fetch('https://fakestoreapi.com/products/categories')

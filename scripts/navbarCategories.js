@@ -1,3 +1,4 @@
+
 const getCategories = async () => {
     try {
         let categories = await fetch('https://fakestoreapi.com/products/categories')
@@ -5,15 +6,29 @@ const getCategories = async () => {
 
         let nav = document.getElementById('nav');
         let navUl = document.createElement('ul');
+
+        let navLiHome = document.createElement('li');
+        let navAHome = document.createElement('a');
+        let ATextHome = document.createTextNode('Home');
+
+        navAHome.style.cursor = 'pointer';
+
+        navAHome.appendChild(ATextHome)
+        navLiHome.appendChild(navAHome);
+        navUl.appendChild(navLiHome);
+
         for (let i = 0; i < categories.length; i++) {
             let navLi = document.createElement('li');
             let navA = document.createElement('a');
             let AText = document.createTextNode(categories[i]);
             nav.style.color = '#eee';
             navA.style.cursor = 'pointer';
+            /*categorizeHome(categories[i]);*/
+
             navA.appendChild(AText)
             navLi.appendChild(navA);
             navUl.appendChild(navLi);
+
         }
         nav.appendChild(navUl);
         console.log('nav bar is ready now.');

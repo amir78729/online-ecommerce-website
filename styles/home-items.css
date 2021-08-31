@@ -73,6 +73,11 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     margin: auto;
+    transition: background-size .2s;
+}
+.home-item .item-image:hover {
+    background-size: 55%;
+    transition: background-size .2s;
 }
 
 .home-item .item-image img {

@@ -10,7 +10,7 @@ const createProductElement = (product) => {
     pic.style.backgroundSize = '46%';
     title.after(pic);
 
-    title.after(document.createTextNode(product.description))
+    document.getElementById('price').textContent = `${product.price}$`
 }
 
 const resizePicture = () => {
@@ -32,7 +32,6 @@ const resizePicture = () => {
         case '4':
             pic.style.backgroundSize = '50%';
             break;
-
     }
 }
 
@@ -43,4 +42,5 @@ const getProductInfo = async () => {
     console.log(product);
     createProductElement(product);
 }
+
 getProductInfo();

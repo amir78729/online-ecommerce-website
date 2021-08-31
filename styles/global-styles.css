@@ -89,3 +89,7 @@ button:hover i {
     transition: transform .2s, opacity .2s, margin-right .2s;
 }
 
+.button {
+    color: white;
+    width: 100%;
+}

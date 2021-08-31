@@ -20,11 +20,20 @@
 
             <label for="password">Password: <a href="#">Forgot password?</a></label>
             <input type="password" id="password">
-
-            <input type="submit" value="Sign in">
+            <button onclick="submit()">Sign in</button>
+            <!--<input type="submit" value="Sign in" onclick="submit()">-->
         </form>
         <p class="hr-text">What's new?</p>
         <button><i class='fab fa-google'></i> Sign-in with Google</button>
     </div>
+    <script>
+        function submit() {
+            console.log('submit')
+            let emailOrPhone = document.getElementById('email-phone').value;
+            let password = document.getElementById('password').value;
+            emailOrPhone += emailOrPhone;
+            alert(password + emailOrPhone);
+        }
+    </script>
 </body>
 </html>

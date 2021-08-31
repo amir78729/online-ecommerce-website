@@ -69,12 +69,17 @@ const addProductToHome = (product) => {
     moreInfo.appendChild(moreInfoButton);
     homeItem.appendChild(moreInfo);
 
+    homeItem.setAttribute('title', `${product.title}:\n${product.description}`)
+
     return homeItem
 }
 
+let productsInformation;
+
+
 const getInfo = async () => {
     try {
-        let productsInformation = await fetch('https://fakestoreapi.com/products')
+        productsInformation = await fetch('https://fakestoreapi.com/products')
             .then(res=>res.json());
 
         let main = document.getElementById('main');
@@ -88,6 +93,12 @@ const getInfo = async () => {
     }
 }
 
+/*export const categorizeHome = category => {
+    alert(category)
+}*/
 
+/*
+module.exports(categorizeHome)
+*/
 
 getInfo();

@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fake Shop - Product Name</title>
+  <!-- importing icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <!-- importing CSS files -->
+  <link rel="stylesheet" href="styles/global-styles.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/car-items.css">
 </head>
 <body>
+<header>
+  <div class="logo">
+    <img src="https://cdn.discordapp.com/attachments/709721780767424587/869638236958523462/logo.png"
+         alt="logo of the website" class="logo">
+  </div>
+  <form>
+    <label for="search_area" style="display: none"></label>
+    <input type="text" id="search_area" placeholder="Search Products">
+    <button type="submit"><i class="material-icons">search</i></button>
+  </form>
+  <a href="" class="cart-items button"><i class='fas fa-shopping-cart'></i>Cart Items</a>
+  <a href="login.html" class="login button"><i class='fas fa-user-alt'></i> Login</a>
+  <button class="menu">
+    <div class="menu-icon">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </button>
+  <nav id="nav">
+    <!--<ul>
+      <li><a href="">Electronics</a></li>
+      <li><a href="">Clothing</a></li>
+      <li><a href="">Furniture</a></li>
+      <li><a href="">Men</a></li>
+      <li><a href="">Women</a></li>
+      <li><a href="">Books</a></li>
+      <li><a href="">TV's</a></li>
+      <li><a href="">Computers</a></li>
+      <li><a href="">Home Appliances</a></li>
+    </ul>-->
+  </nav>
+</header>
+<main id="main">
+  <div class="cart-item">
+    <div class="cart-item-pic"></div>
+    <h2 class="cart-item-title">CART ITEM TITLE</h2>
 
+    <div class="cart-item-quantity">
+      <button class="change-quantity">-</button>
+      <p>1</p>
+      <button class="change-quantity">-</button>
+    </div>
+
+  </div>
+</main>
+
+<script src="scripts/navbarCategories.js" defer></script>
+<script src="scripts/productInfo.js" defer></script>
 </body>
 </html>

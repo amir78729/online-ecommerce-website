@@ -11,9 +11,8 @@ const getCategories = async () => {
         let navAHome = document.createElement('a');
         let ATextHome = document.createTextNode('Home');
 
-        navAHome.style.cursor = 'pointer';
-
-        navAHome.appendChild(ATextHome)
+        navAHome.appendChild(ATextHome);
+        navAHome.setAttribute('href','home.html')
         navLiHome.appendChild(navAHome);
         navUl.appendChild(navLiHome);
 
@@ -22,10 +21,10 @@ const getCategories = async () => {
             let navA = document.createElement('a');
             let AText = document.createTextNode(categories[i]);
             nav.style.color = '#eee';
-            navA.style.cursor = 'pointer';
             /*categorizeHome(categories[i]);*/
 
-            navA.appendChild(AText)
+            navA.appendChild(AText);
+            navA.setAttribute('href','home.html?category=' + categories[i])
             navLi.appendChild(navA);
             navUl.appendChild(navLi);
 

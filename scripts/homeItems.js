@@ -1,3 +1,5 @@
+let urlParams = new URLSearchParams(window.location.search);
+
 const addProductToHome = (product) => {
 
     /*<div class="home-item tooltip">
@@ -79,8 +81,28 @@ let productsInformation;
 
 const getInfo = async () => {
     try {
-        productsInformation = await fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json());
+        let category = urlParams.get('category')
+        console.log(category)
+        if (category === null || category.toLowerCase() === 'all') {
+            productsInformation = await fetch('https://fakestoreapi.com/products')
+                .then(res=>res.json());
+        } else if (category === 'electronics' ||
+            category === 'jewelery' ||
+            category === "men's clothing" ||
+            category === "women's clothing") {
+
+            let url = 'https://fakestoreapi.com/products/category/' + category;
+            console.log(url)
+            productsInformation = await fetch(url)
+                .then(res=>res.json());
+
+            console.log(productsInformation)
+
+        } else {
+            alert('bad url')
+            console.log('bad url for home page')
+        }
+
 
         let main = document.getElementById('main');
 
@@ -89,7 +111,7 @@ const getInfo = async () => {
         }
         console.log('home items are ready.')
     } catch (error) {
-        console.log(error, '\n failed to get home items from the api');
+        console.log(error + '\n failed to get home items from the api');
     }
 }
 

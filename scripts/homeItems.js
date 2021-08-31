@@ -61,7 +61,7 @@ const addProductToHome = (product) => {
 
     // more information
     let moreInfo = document.createElement('a');
-    moreInfo.href = "product.html";
+    moreInfo.href = "product.html?productId=" + product.id;
     let moreInfoButton = document.createElement('button');
     moreInfoButton.classList.add('more-info');
     let moreInfoButtonIcon = document.createElement('i');

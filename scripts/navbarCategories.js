@@ -20,7 +20,6 @@ const getCategories = async () => {
             let navA = document.createElement('a');
             let AText = document.createTextNode(categories[i]);
             nav.style.color = '#eee';
-            /*categorizeHome(categories[i]);*/
 
             navA.appendChild(AText);
             navA.setAttribute('href','home.html?category=' + categories[i])

@@ -1,23 +1,15 @@
 let urlParams = new URLSearchParams(window.location.search);
 
 const createProductElement = (product) => {
-    let title = document.getElementById('product-title');
-    let titleText = document.createTextNode(product.title);
-    title.appendChild(titleText);
-
-    let pic = document.createElement('div');
-    pic.classList.add('product-image');
-    pic.id = 'profile-pic';
-    pic.style.backgroundImage = `url('${product.image}')`;
-    pic.style.backgroundSize = '46%';
-    title.after(pic);
-
-    document.getElementById('price').textContent = `${product.price}$`
+    document.getElementById('product-title').textContent = product.title;
+    document.getElementById('product-pic').style.backgroundImage = `url('${product.image}')`;
+    document.getElementById('price').textContent = `${product.price}$`;
+    document.getElementById('product-description').textContent = product.description;
 }
 
 const resizePicture = () => {
     let size = document.getElementById('product-size').value;
-    let pic = document.getElementById('profile-pic');
+    let pic = document.getElementById('product-pic');
     switch (size) {
         case '0':
             pic.style.backgroundSize = '42%';

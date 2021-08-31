@@ -34,6 +34,7 @@ main > a {
     background-color: white;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 46%;
     position: relative;
     grid-row: 1/3;
     grid-column: 1/3;
@@ -86,7 +87,7 @@ main > a {
 }
 
 .product-info form {
-    grid-row: 2/4;
+    grid-row: 2/3;
     grid-column: 3/6;
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -111,7 +112,7 @@ main > a {
 .product-info .remove {
     vertical-align: center;
     height: 40px;
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 5/7;
 }
 
@@ -121,8 +122,15 @@ main > a {
 
 .product-info .wishlist {
     height: 40px;
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 7/9;
+}
+
+.product-info .product-description {
+    grid-column: 1/9;
+    grid-row: 3;
+    color: #aaaaaa;
+    text-align: justify;
 }
 
 /* range label weights */
@@ -159,7 +167,7 @@ main > a {
 
     .product-info form {
         grid-column: 3/9;
-        grid-row: 2/4;
+        grid-row: 2/3;
     }
 
     .product-info .wishlist {
@@ -208,15 +216,22 @@ main > a {
         grid-row: 5;
     }
 
-    .product-info .wishlist {
+    .product-info .product-description {
         grid-column: 1/9;
         grid-row: 6;
     }
 
-    .product-info .remove {
+    .product-info .wishlist {
         grid-column: 1/9;
         grid-row: 7;
     }
+
+    .product-info .remove {
+        grid-column: 1/9;
+        grid-row: 8;
+    }
+
+
 }
 
 @media screen and (max-width: 600px){
@@ -252,6 +267,8 @@ main > a {
         width: calc(100% - 8px);
         margin: auto;
     }
+
+
 }
 
 /*Chrome*/

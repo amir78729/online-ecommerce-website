@@ -10,7 +10,7 @@
   <!-- importing CSS files -->
   <link rel="stylesheet" href="styles/global-styles.css">
   <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/car-items.css">
+  <link rel="stylesheet" href="styles/cart-items.css">
 </head>
 <body>
 <header>
@@ -49,12 +49,19 @@
 <main id="main">
   <div class="cart-item">
     <div class="cart-item-pic"></div>
-    <h2 class="cart-item-title">CART ITEM TITLE</h2>
 
-    <div class="cart-item-quantity">
-      <button class="change-quantity">-</button>
-      <p>1</p>
-      <button class="change-quantity">-</button>
+    <div>
+      <p class="cart-item-title">CART ITEM TITLE</p>
+      <div class="cart-item-quantity">
+        <button class="change-quantity">-</button>
+        <p>1</p>
+        <button class="change-quantity">+</button>
+      </div>
+    </div>
+
+    <div>
+      <a href=""><button>more info about product</button></a>
+      <a href=""><button>remove item from cart</button></a>
     </div>
 
   </div>

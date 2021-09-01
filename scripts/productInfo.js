@@ -6,6 +6,14 @@ const createProductElement = (product) => {
     document.getElementById('product-pic').style.backgroundImage = `url('${product.image}')`;
     document.getElementById('price').textContent = `${product.price}$`;
     document.getElementById('product-description').textContent = product.description;
+    document.getElementById('remove').onclick = () => {
+        if (localStorage.getItem(JSON.stringify(product)) === null) {
+            alert('Actually there is nothing to delete!');
+        }
+        else if (confirm(`Are you sure you want to remove "${product.title}" from your cart?`)) {
+            localStorage.removeItem(JSON.stringify(product))
+        }
+    }
 }
 
 const resizePicture = () => {

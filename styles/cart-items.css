@@ -4,30 +4,55 @@
     width: 100%;
     background-color: #222222;
     padding: 20px;
+    position: relative;
 }
+
+.cart-item:after{
+    content: ' ';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-image: linear-gradient(to right, transparent, goldenrod, transparent);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+
+.cart-item:last-child:after{
+    background: unset;
+}
+
 * {
     box-sizing: border-box;
 }
 .cart-item > div:nth-child(2) { /* title + quantity */
     display: flex;
     flex-direction: column;
-    background-color: red;
 }
 .cart-item > div:nth-child(3) { /* buttons */
     display: flex;
     flex-direction: column;
-    background-color: green;
     width: 250px;
     float: right;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transition: opacity .2s;
 }
 
 .cart-item > div:nth-child(3) * { /* buttons */
     width: 100%;
-    margin: 5px;
+    margin: 5px 0;
+    padding: 0 15px;
 }
 
 .cart-item > div:nth-child(3) button { /* buttons */
     background-color: #444444;
+}
+
+.cart-item:hover > div:nth-child(3) { /* buttons */
+    opacity: 1;
+    transition: opacity .2s;
 }
 
 .cart-item-pic {
@@ -37,11 +62,17 @@
     border-radius: 50%;
     margin: 30px;
 }
+.cart-item-title {
+    color: goldenrod;
+    font-weight: bold;
+}
 .cart-item-quantity {
     display: flex;
     align-items: center;
+
     width: 60px;
     justify-content: space-between;
+    color: white;
 }
 
 .change-quantity {
@@ -49,4 +80,28 @@
     height: 20px;
     width: 20px;
     background-color: #444444;
+}
+
+@media screen and (max-width: 600px){
+    .cart-item {
+        flex-direction: column;
+    }
+
+    .cart-item > div {
+        margin: auto;
+    }
+
+    .cart-item > div:nth-child(3) { /* buttons */
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        float: unset;
+        position: unset;
+        right: unset;
+        opacity: 1;
+        transition: opacity .2s;
+    }
+    .cart-item > div:nth-child(2) { /* buttons */
+        align-items: center;
+    }
 }

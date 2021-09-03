@@ -67,9 +67,14 @@ const createSingleCartItem = (data, quantity) => {
     decrease.classList.add('change-quantity');
     decrease.innerText = '-';
     decrease.onclick = () => {
-        quantity--;
-        localStorage.setItem(JSON.stringify(data), quantity);
-        creatCartItems();
+        if (quantity > 1) {
+            quantity--;
+            localStorage.setItem(JSON.stringify(data), quantity);
+            creatCartItems();
+        } else {
+            alert('You can have at least one from each product in your cart. If you want, you can remove it.')
+        }
+
     }
     cartItemQuantity.appendChild(decrease);
 

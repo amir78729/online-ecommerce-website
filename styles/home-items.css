@@ -21,6 +21,13 @@ main {
     overflow: auto;
 }
 
+.category {
+    border: 1px goldenrod solid;
+    font-size: 14px;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
 .home-item:hover {
     box-shadow: 0 0 50px #00000055;
     top: -5px;

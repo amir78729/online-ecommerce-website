@@ -24,7 +24,9 @@ const addProductToHome = (product) => {
     // top div
     let homeItemTopDiv = document.createElement('div');
     let homeItemTopDivP = document.createElement('p');
-    homeItemTopDivP.appendChild(document.createTextNode('stock+'));
+    homeItemTopDivP.innerText = product.category;
+    homeItemTopDivP.classList.add('category');
+
     homeItemTopDiv.appendChild(homeItemTopDivP);
     let likeButton = document.createElement('button');
     likeButton.classList.add('like-button');

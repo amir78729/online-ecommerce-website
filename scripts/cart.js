@@ -125,7 +125,9 @@ const creatCartItems = () => {
 
     let main = document.getElementById('main');
     main.innerHTML = '';
-    let isEmpty = true
+    let isEmpty = true;
+
+    // TODO: filter
     for (let p in localStorage) {
         if (localStorage.getItem(p) !== null) {
             isEmpty = false;
@@ -133,6 +135,7 @@ const creatCartItems = () => {
             totalPrice += JSON.parse(p).price * localStorage.getItem(p);
         }
     }
+    // TODO: new function + get rid of "isEmpty" variable
     if (isEmpty) {
         let emptyCart = document.createElement('footer');
         emptyCart.innerHTML = `

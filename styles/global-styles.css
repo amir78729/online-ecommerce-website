@@ -41,6 +41,14 @@ header input[type="submit"], button{
     transition: background-color .2s;
 }
 
+p, h1, h2, h3 {
+    cursor: default;
+}
+
+a, button {
+    cursor: pointer;
+}
+
 button:hover, input[type='submit']:hover {
     background-color: goldenrod;
     transition: background-color .2s;

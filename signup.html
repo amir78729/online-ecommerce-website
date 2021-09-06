@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fake Shop - Signup</title>
+  <!-- importing icons -->
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <!-- importing CSS files -->
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="styles/global-styles.css">
+</head>
+<body>
+<div class="banner"></div>
+<div class="login-form">
+  <h2>Signup</h2>
+  <form style="border: unset">
+
+    <label for="fisrtname">First Name:</label>
+    <input type="text" id="fisrtname">
+
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname">
+
+    <label for="username">Username:</label>
+    <input type="text" id="username">
+
+    <label for="email">Email:</label>
+    <input type="text" id="email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password">
+
+    <!--<button onclick="submit()">Sign Up</button>-->
+    <input type="submit" value="Sign in" onclick="submit()">
+  </form>
+
+</div>
+<script>
+  function submit() {
+    console.log('submit')
+    let emailOrPhone = document.getElementById('email-phone').value;
+    let password = document.getElementById('password').value;
+    emailOrPhone += emailOrPhone;
+    alert(password + emailOrPhone);
+  }
+</script>
+</body>
+</html>

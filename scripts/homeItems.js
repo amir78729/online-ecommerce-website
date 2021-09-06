@@ -108,6 +108,7 @@ const getInfo = async () => {
 
         let main = document.getElementById('main');
 
+        // TODO: map
         for (let p = 0; p < productsInformation.length; p++) {
             main.appendChild(addProductToHome(productsInformation[p]));
         }
